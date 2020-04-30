@@ -1,0 +1,19 @@
+@mixin for_breakpoint($dimension, $media) {
+  @if $media==desktop {
+      @media ($dimension: $desktop) {
+          @content;
+      }
+  }
+
+  @else if $media==tablet {
+      @media ($dimension: $tablet) {
+          @content;
+      }
+  }
+
+  @else if $media==retina {
+      @media only screen and ($dimension: $retina) {
+          @content;
+      }
+  }
+}
